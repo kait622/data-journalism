@@ -1,2 +1,3 @@
 data-journalism
 ===============
+<p>Putin has a lot of catching up to do if he still dreams of winning the space race. Of the 43 spacecraft sent to Mars since 1960, 93% were sent by the U.S. and the former USSR. While 71% of NASA’s missions have been successful, 84% of the former USSR’s missions have failed. Especially embarrassing for Russia was an attempted partnership with China in 2011 – the shuttle didn’t even make it past Earth’s orbit. Meanwhile, newcomer India’s first mission in 2013 successfully explored Mars’ surface features, mineralogy, and atmosphere.</p> 
