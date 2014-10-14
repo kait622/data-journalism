@@ -1,4 +1,4 @@
-<a href = "Final-Project-Pitches.html">Pitches</a>
+<a href = "pitches.html">Pitches</a> 
 
 <p> Data: Final Project Pitches </p> 
 
