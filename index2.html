@@ -1,154 +1,22 @@
-<html> 
-
- <style type="text/css">
+<style type="text/css">
 
   body {
       width:760px;
       margin:40px auto;
       font-family: georgia, sans;
-    }
+  }
 
   h1 {
       border-bottom:1px solid #dedede;
       margin-bottom:20px;
       padding-bottom:20px;
-    }
-
-  body {
-  font: 14px/1.4 arial;
   }
 
-.imgWrap {
-  position: relative;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  margin-left: 5px;
-  height: 100px;
-  width: 100px;
-  display: inline;
-  }
-
-.imgDescription {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(29, 106, 154, 0.72);
-  color: #fff;
-  text-align: center,
-  }
-
-    body{
-      width: 760px;
-      margin: 40px auto;
-      font-family: georgia, sans;
-      }
-
-    h1 {
-      border-bottom: 1px solid #dedede;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-    }
+  </style>
 
 
- </style>
-
- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-// Create a global total
-var total = 0;
-
-function showDetails(brand) {
-    // begin to parse for details
-
-    // Here we're going to extract the name.
-    // first we get the "src" attribute off the 
-    // instance of brand(remember this)
-    var dataSrc = brand.getAttribute("src");
-    // Here we pass our attribute value to the extract
-    // name function, which will return our answer and 
-    // which we'll "catch" with our new "name" var
-    var name = extractName(dataSrc);
-
-
-    // Now we'll grab the "data" attribute which is
-    // a number in string form.
-    var dataDose = brand.getAttribute("data");
-    // Here we'll let Javascript create a number out 
-    // of our "number" string. doseNumber is now an
-    // integer that we can add to other integers
-    var doseNumber = parseInt(dataDose);
-    
-
-    // total the dose
-    total += doseNumber;
-    console.log(total);
-    console.log(dataDose);
-    console.log(doseNumber);
-    // put it back out to the document.
-    document.getElementById("divAnswer").innerHTML = ( name + " contains " + doseNumber + "mg." + " Your cumulative daily intake is " + total+"mg.");
-
-
+  <h1>Starter interactive</h1>
   
-    //alert(brand.innerHTML + " contains " + dataDose + "mg.");
-}
-function extractName (src) {
-    // Longer version
-    // var slashSpace = 0;
-    // var dotSpace = 0;
-    // for( var i = 0; i < dataSrc.length; ++i ) {
-    //   if(src[i] == "/") {
-    //     slashSpace = i+1;
-    //   }
-    //   else if( src[i] == ".") {
-    //     dotSpace = i - slashSpace;
-    //   }
-    // }
-    // var name = src.substr(slashSpace, dotSpace);
-
-    // Shorter Version
-    var shortSlash = src.indexOf("/") + 1;
-//must subtract 1 from shortDot to replace Capitalize.
-    var shortDot = src.indexOf(".") - shortSlash -1;
-    // first argument to substr is index in the string of the start of the sub
-    // second argument to substr is the length from that index to sub
-    //.replace replaces space twice and capitalizes
-    return src.substr(shortSlash, 1).toUpperCase() + src.substr(shortSlash+1, shortDot).replace("_", " ").replace("_", " ");
-
-}
-// return src.substr(shortSlash, shortDot).replace("_", " ").toUpperCase();
-/*function overDose() {
-    if (doseNumber) > 3000 {console.log("You just overdosed and went into liver failure");
-    }
-}*/
-
-</script>
-
-</head>
-<!-- http://www.propublica.org/article/over-the-counter-pills-left-out-of-fda-acetaminophen-limits
-McNeil pledged it would add language to their drug labels recommending a lower total daily limit of 3,000 milligrams – or six extra strength pills.
-
- -->
-
-  <body> 
-
-                <div id="divAnswer">
-
-                  <p id="overdose"> </p>
-<!-- blank div to display answer
- -->
-
 	<h1>How Much Acetaminophen Are You Taking?</h1>
 
 	<div id="divAnswer">
@@ -157,111 +25,44 @@ McNeil pledged it would add language to their drug labels recommending a lower t
 
   <p>Combining the daily maximum dose of common drugs can lead to an overdose.</p>
 
-  </div>
-
-         <div id="drug"> 
-
-  <img src="tylenol/images/robitussin_files/excedrin.jpg" onclick="showDetails(this)" data="2000">
-
-  <img src="tylenol/images/robitussin_files/nyquil.jpg" onclick="showDetails(this)" data="2600">
-
-  <img src="tylenol/images/robitussin_files/robitussin.jpg" onclick="showDetails(this)" data="3840">
-
-  <img src="tylenol/images/robitussin_files/sudafed.jpg" onclick="showDetails(this)" data="3250">
-
-  <img src="tylenol/images/robitussin_files/alkaseltzer.jpg" onclick="showDetails(this)" data="2000">
-
-  <img src="tylenol/images/robitussin_files/theraflu.jpg" onclick="showDetails(this)" data="3900">
-
-  <img src="tylenol/images/robitussin_files/tylenolextrastrngth.jpg" onclick="showDetails(this)" data="3000">
-
-  <img src="tylenol/images/robitussin_files/zicam.jpg" onclick="showDetails(this)" data="3900">
-
-  <img src="tylenol/images/robitussin_files/anacin.jpg" onclick="showDetails(this)" data="4000">
-
-  <img src="tylenol/images/robitussin_files/childrenstylenol.jpg" onclick="showDetails(this)" data="800">
-
-  <img src="tylenol/images/robitussin_files/dimetapp.jpg" onclick="showDetails(this)" data="800">
-
-  <img src="tylenol/images/robitussin_files/panadol.jpg" onclick="showDetails(this)" data="800">
-
-  <img src="tylenol/images/robitussin_files/dayquil.jpg" onclick="showDetails(this)" data="1300" >
-
-  <img src="tylenol/images/robitussin_files/coricidin.jpg" onclick="showDetails(this)" data="3900">
-
-  <img src="tylenol/images/robitussin_files/tylenolwcodeine.jpg" onclick="showDetails(this)" data="4000">
-
-  <img src="tylenol/images/robitussin_files/vicodin.jpg" onclick="showDetails(this)" data="3960">
-
-  <img src="tylenol/images/robitussin_files/percocet.jpg" onclick="showDetails(this)" data="3900">
+  <p id="total">Total dose</p>
   
-  <img src="tylenol/images/robitussin_files/hydrocodone.jpg" onclick="showDetails(this)" data="3900">
 
-  <img src="tylenol/images/robitussin_files/oxycodone.jpg" onclick="showDetails(this)" data="3900">
+<img data-dose="2000" src="drug photos/alkaseltzer.jpg" alt="alternative text" />
+<img data-dose="4000" src="drug labels/anacin.jpg" alt="alternative text" />
+<img data-dose="800" src="drug labels/childrenstylenol.jpg" alt="alternative text" />
+<img data-dose="2900" src="drug labels/coricidin.jpg" alt="alternative text" />
+<img data-dose="1300" src="drug labels/dayquil.jpg" alt="alternative text" />
+<img data-dose="800" src="drug labels/dimetapp.jpg" alt="alternative text" />
+<img data-dose="2000" src="drug labels/excedrin.jpg" alt="alternative text" />
+<img data-dose="3900" src="drug labels/hydrocodone.jpg" alt="alternative text" />
+<img data-dose="2600" src="drug labels/nyquil.jpg" alt="alternative text" />
+<img data-dose="3900" src="drug labels/oxycodone.jpg" alt="alternative text" />
+<img data-dose="800" src="drug labels/panadol.jpg" alt="alternative text" />
+<img data-dose="3900" src="drug labels/percoset.jpg" alt="alternative text" />
+<img data-dose="3840" src="drug labels/robitussin.jpg" alt="alternative text" />
+<img data-dose="3250" src="drug labels/sudafed.jpg" alt="alternative text" />
+<img data-dose="3900" src="drug labels/theraflu.jpg" alt="alternative text" />
+<img data-dose="3000" src="drug labels/tylenolextrastrngth.jpg" alt="alternative text" />
+<img data-dose="4000" src="drug labels/tylenolwcodeine.jpg" alt="alternative text" />
+<img data-dose="2600" src="drug labels/ultracet.jpg" alt="alternative text" />
+<img data-dose="3960" src="drug labels/vicodin.jpg" alt="alternative text" />
+<img data-dose="3900" src="drug labels/zicam.jpg" alt="alternative text" />
   
-  <img src="tylenol/images/robitussin_files/ultracet.jpg" onclick="showDetails(this)" data="2600">
+  
+<script src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+var total=0;
+console.log("hi")
+$( "img" ).click(function() {
+  var drug=+$(this).attr("data-dose");
+  total+=drug;
+$("#total").html(total)
 
-</div>
-
-  <button onclick="myFunction()">Try it</button>
-  <p id="demo"></p>
-
-  <script>
-
-  var tempJson;
-  // this is how you comment in javascript.
-
-        console.log("this is where javascript will go!");
-
-         $.getJSON('/Druglist.json', function(json){
-         var Druglist = json;
-         tempJson = json;
-         console.log(tempJson[0].Dose +tempJson[1].Dose); 
+  });
 
 
-          //document.write( tempJson[0].Drug );
-         }
-      );
-
-function myFunction() {
-
-          a = tempJson[0].Dose;
-          b = tempJson[1].Dose;
-          c = a - -b;
- document.getElementById("demo").innerHTML = c;
-
-}
-</script>
-    
+  
   </script>
-
  
- </body>
- </html>
-
-<!-- 
- <img src="images/anacin.jpg" data="4000">
-<img src="images/childrenstylenol.jpg" data="800">
-<img src="images/coricidin.jpg" data="3900">
-<img src="images/dayquil.jpg" data="800">
-<img src="images/dimetapp.jpg" data="2000">
-<img src="images/excedrin.jpg" data="3000">
-<img src="images/hydrocodone.jpg" data="3900">
-<img src="images/nyquil.jpg" data="2600">
-<img src="images/oxycodone.jpg" data="3900">
-<img src="images/panadol.jpg" data="3840">
-<img src="images/percoset.jpg" data="3250">
-<img src="images/robitussin.jpg" data="3900">
-<img src="images/sudafed.jpg" data="4000">
-<img src="images/theraflu.jpg" data="2600">
-<img src="images/tylenolextrastrngth.jpg" data="4000">
-<img src="images/tylenolwcodeine.jpg" data="2600">
-<img src="images/ultracet.jpg" data="3960">
-<img src="images/vicodin.jpg" data="3900">
-<img src="images/zicam.jpg" data="3900"> 
-
-http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_global_data
-
- -->
-
 
