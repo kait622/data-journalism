@@ -1,0 +1,9 @@
+<table border="0">
+<tbody>
+<tr><th>drought severity</th><th>drought severity</th><th>year</th></tr>
+<tr class="row"><td>none</td><td>5.5</td><td>23</td></tr>
+<tr class="otherrow"><td>D0-D4</td><td>10.2</td><td>10</td></tr>
+<tr class="row"><td>D1-D4</td><td>6.1</td><td>13</td></tr>
+<tr class="otherrow"><td>D2-D4</td><td>3.8</td><td>7</td></tr>
+</tbody>
+</table>

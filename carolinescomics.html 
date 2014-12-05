@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href=
+    "http://graphics8.nytimes.com/newsgraphics/2014/06/23/us-table/83efa016cdcdc69a21435991e6ec5fd6f10cbd8b/build.css"
+    rel="stylesheet" type="text/css">
+
+    <title></title>
+</head>
+
+<body>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div id="g-scenario-overview">
+        <table class="scenario-table">
+            <tr>
+                <th class="usa-option"></th>
+
+                <th class="other-option">If Ghana beats Portugal</th>
+
+                <th class="other-option">If Ghana and Portugal tie</th>
+
+                <th class="other-option">If Portugal beats Ghana</th>
+            </tr>
+
+            <tr class="option-row">
+                <td class="usa-option">If the U.S. beats Germany</td>
+
+                <td class="g-advance other-option">The U.S. advances</td>
+
+                <td class="g-advance other-option">The U.S. advances</td>
+
+                <td class="g-advance other-option">The U.S. advances</td>
+            </tr>
+
+            <tr class="option-row">
+                <td class="usa-option">If the U.S. ties Germany</td>
+
+                <td class="g-advance other-option">The U.S. advances</td>
+
+                <td class="g-advance other-option">The U.S. advances</td>
+
+                <td class="g-advance other-option">The U.S. advances</td>
+            </tr>
+
+            <tr class="option-row">
+                <td class="usa-option">If Germany beats the U.S.</td>
+
+                <td class="other-option">The U.S. could still advance, but it
+                has many fewer options</td>
+
+                <td class="g-advance other-option">The U.S. advances</td>
+
+                <td class="other-option">The U.S. probably advances if both
+                games are close</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
